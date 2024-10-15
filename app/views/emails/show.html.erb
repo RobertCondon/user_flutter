@@ -1,0 +1,9 @@
+<h1><%= @email.subject %></h1>
+<p><strong>From:</strong> <%= @email.from %></p>
+<p><strong>To:</strong> <%= @email.to %></p>
+<p><strong>Date:</strong> <%= @email.date %></p>
+<hr>
+<div>
+  <%= simple_format(@email.body) %>
+</div>
+<%= link_to 'Back to Inbox', emails_path %>

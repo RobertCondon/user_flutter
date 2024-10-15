@@ -1,0 +1,15 @@
+<h1>Email Inbox</h1>
+<table border="1" id="emails-table">
+  <tr>
+    <th>From</th>
+    <th>Subject</th>
+    <th>Date</th>
+  </tr>
+  <% @emails.each do |email| %>
+    <tr>
+      <td><%= email.from %></td>
+      <td><%= link_to email.subject, email_path(email) %></td>
+      <td><%= email.date.strftime('%Y-%m-%d %H:%M') %></td>
+    </tr>
+  <% end %>
+</table>
